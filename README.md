@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Webapp Starter
 ==============
 
@@ -48,3 +49,7 @@ Everything in the src folder is for example purposes. Have a look to see how eve
 ## Resources
 
 If you want a more stable and probable better put together React Kit project that uses webpack, have a look at the [React Starter Kit](https://github.com/kriasoft/react-starter-kit).
+=======
+# lerenzo
+Personal website
+>>>>>>> a9eca8d1367d354a4229630674957b871f529836
