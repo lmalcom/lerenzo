@@ -1,0 +1,19 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.AboutPage {
+  width: 100%;
+}
+.AboutPage h1 {
+  text-align: center;
+}
+.AboutPage-container {
+  margin: 0 auto;
+  padding: 0 0 40px;
+  max-width: 1000px;
+}
+.AboutPage .resume {
+  text-align: center;
+  font-weight: 400;
+  margin: auto auto;
+  display: block;
+}

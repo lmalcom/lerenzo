@@ -1,0 +1,956 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.AboutPage {
+  width: 100%;
+}
+.AboutPage h1 {
+  text-align: center;
+}
+.AboutPage-container {
+  margin: 0 auto;
+  padding: 0 0 40px;
+  max-width: 1000px;
+}
+.AboutPage .resume {
+  text-align: center;
+  font-weight: 400;
+  margin: auto auto;
+  display: block;
+}
+
+/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+html {
+  color: #222;
+  font-weight: 100;
+  font-size: 1em;
+  font-family: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
+  line-height: 1.375;
+}
+body {
+  background: #000000;
+  background-image: url("/simple_dashed.png");
+  background-image: url("/src/images/grey_wash_wall.png");
+  margin: 0;
+  font-family: videogame;
+  font-family: 'chunkfive';
+}
+@font-face {
+  font-family: 'videogame';
+  src: url("/src/fonts/ARCADECLASSIC.TTF");
+}
+@font-face {
+  font-family: 'quicksand';
+  src: url("/src/fonts/Quicksand-Regular.otf");
+}
+@font-face {
+  font-family: 'chunkfive';
+  src: url("/src/fonts/Chunkfive.otf");
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("/src/fonts/icomoon.ttf");
+}
+* {
+  transition: all .25s;
+  box-sizing: border-box;
+}
+h1 {
+  color: #222222;
+  font-weight: lighter;
+}
+h1,
+h2 {
+  text-shadow: 1px 1px 1px rgba(200, 200, 200, 0.27);
+}
+p {
+  font-family: quicksand;
+  color: #cbcbcb;
+  text-shadow: 1px 1px 1px #000000;
+}
+a {
+  color: #ffd500;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.77);
+}
+#app {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+#threeCanvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.App-container-default {
+  width: 100%;
+  height: 100%;
+}
+.page {
+  height: calc(100% - 80px);
+  display: inline-block;
+  float: left;
+  box-shadow: inset 10px 5px 85px rgba(0, 0, 0, 0.6);
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.DescriptionBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.DescriptionBox-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.ExamplesPage {
+  width: 100%;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+.ExamplesPage-container {
+  margin: 0 auto;
+  padding: 20px 0 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+.ExamplesPage iframe {
+  display: inline-block;
+  width: 50%;
+  min-width: 300px;
+  max-width: 500px;
+  height: 360px;
+  border: none;
+  margin: 20px auto;
+  padding: 0 5px;
+}
+.ExamplesPage img {
+  width: 50%;
+  display: inline-block;
+  padding: 10px;
+}
+.ExamplesPage h1 {
+  text-align: center;
+  margin: 0;
+}
+.ExamplesPage .example {
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+.ExamplesPage .exampleHeader {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.ExamplesPage .exampleHeader h2 {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  font-weight: 400;
+}
+.ExamplesPage .exampleHeader .subheader {
+  display: inline-block;
+  float: left;
+  color: #aaaaaa;
+  font-weight: lighter;
+  font-family: 'quicksand';
+  margin-bottom: 0;
+  padding-top: 7px;
+  padding-left: 20px;
+}
+.ExamplesPage p {
+  max-width: 1000px;
+  padding-left: 40px;
+  margin: auto auto;
+  margin-bottom: 25px;
+  font-weight: lighter;
+  font-size: 1em;
+  font-family: quicksand;
+  color: #cbcbcb;
+}
+
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.Footer {
+  color: #fff;
+  z-index: 2;
+  background-color: rgba(17, 17, 17, 0.8);
+  font-family: 'quicksand';
+  height: 30px;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+.Footer a:visited {
+  color: #fff;
+}
+.Footer-container {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.Footer-brand {
+  color: #93e6fc;
+  text-decoration: none;
+  font-size: 1.75em;
+}
+.Footer-brandTxt {
+  margin-left: 10px;
+}
+.Footer .logo {
+  text-decoration: none;
+  float: left;
+  text-align: center;
+  font-size: 2.4em;
+  line-height: 70px;
+  cursor: pointer;
+}
+.Footer .logo .yellow-letters {
+  color: #ffd500;
+  font-weight: bold;
+}
+.Footer-nav {
+  float: right;
+  display: inline-block;
+  height: 50px;
+  line-height: 70px;
+}
+.Footer-nav .btn {
+  color: #f0f0f0;
+  display: inline-block;
+  min-width: 50px;
+  min-height: 50px;
+  height: 100%;
+  padding: 5 25px;
+  text-decoration: none;
+}
+.Footer-nav .btn:hover {
+  background-color: rgba(145, 145, 145, 0.8);
+}
+.Footer-banner {
+  text-align: center;
+}
+.Footer-bannerTitle {
+  margin: 0;
+  padding: 10px;
+  font-weight: normal;
+  font-size: 4em;
+  line-height: 1em;
+}
+.Footer-bannerDesc {
+  padding: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.25em;
+  margin: 0;
+}
+.Footer i {
+  font-size: .7em;
+  line-height: 30px;
+  margin-right: 25px;
+}
+.Footer .social {
+  height: 30px;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.Footer .social a {
+  width: 25%;
+  position: relative;
+  height: 30px;
+  display: inline-block;
+  margin: auto auto;
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  background-position: center;
+}
+.Footer .social a:hover {
+  -webkit-transform: scale(1.4) translateY(-5px);
+          transform: scale(1.4) translateY(-5px);
+  background-color: rgba(145, 145, 145, 0.8);
+}
+
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.Header {
+  color: #fff;
+  z-index: 2;
+  background-color: rgba(17, 17, 17, 0.8);
+  font-family: 'quicksand';
+  height: 50px;
+  display: inline-block;
+  float: left;
+  width: 100%;
+}
+.Header a:visited {
+  color: #fff;
+}
+.Header-container {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+}
+.Header-brand {
+  color: #93e6fc;
+  text-decoration: none;
+  font-size: 1.75em;
+}
+.Header-brandTxt {
+  margin-left: 10px;
+}
+.Header .logo {
+  text-decoration: none;
+  float: left;
+  text-align: center;
+  font-size: 2.4em;
+  line-height: 70px;
+  cursor: pointer;
+}
+.Header .logo .yellow-letters {
+  color: #ffd500;
+  font-weight: bold;
+}
+.Header-nav {
+  float: right;
+  display: inline-block;
+  height: 50px;
+  line-height: 70px;
+}
+.Header-nav .btn {
+  color: #f0f0f0;
+  display: inline-block;
+  min-width: 50px;
+  min-height: 50px;
+  height: 100%;
+  padding: 5 25px;
+  text-decoration: none;
+}
+.Header-nav .btn:hover {
+  background-color: rgba(145, 145, 145, 0.8);
+}
+.Header-banner {
+  text-align: center;
+}
+.Header-bannerTitle {
+  margin: 0;
+  padding: 10px;
+  font-weight: normal;
+  font-size: 4em;
+  line-height: 1em;
+}
+.Header-bannerDesc {
+  padding: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.25em;
+  margin: 0;
+}
+
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.IndexPage {
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("/src/images/hearthands-lg.jpg");
+  background-position: center;
+  box-shadow: inset 40px 20px 100px rgba(0, 0, 0, 0.6);
+}
+.IndexPage-default {
+  font-family: 'Aria';
+}
+.IndexPage-default-body {
+  width: 100%;
+  height: calc(100% - 75px);
+}
+.IndexPage-default-body .textBox {
+  display: inline-block;
+  width: 40%;
+  min-width: 250px;
+  padding: 100px 50px;
+  position: absolute;
+  left: 0;
+}
+.IndexPage-default-body .textBox .catchphrase {
+  display: inline-block;
+  float: left;
+  width: 100%;
+}
+.IndexPage-default-body .textBox .catchphrase svg {
+  background: rgba(100, 100, 250, 0.7);
+}
+.IndexPage-default-body .textBox .catchphrase h2,
+.IndexPage-default-body .textBox .catchphrase h3 {
+  display: inline-block;
+  float: right;
+  background-color: rgba(17, 17, 17, 0.7);
+  color: #c8c8c8;
+  padding: 10 25px;
+  margin: 10 auto;
+  font-weight: 500;
+}
+.IndexPage-default-body .textBox .social {
+  float: right;
+  background-color: rgba(17, 17, 17, 0.7);
+  display: inline-block;
+  padding: 10px;
+}
+.IndexPage-default-body .textBox .btn {
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  display: inline-block;
+  margin: 0 10px;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+}
+.IndexPage-default-body .textBox .btn:hover {
+  -webkit-transform: rotateY(360deg) scale(1.3);
+          transform: rotateY(360deg) scale(1.3);
+}
+.IndexPage-default-body .textBox .hire-btn {
+  width: 100%;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(17, 17, 17, 0.7);
+}
+.IndexPage-default-body .textBox .heart-txt {
+  font-family: 'icomoon';
+  color: #FF5490;
+}
+.IndexPage-default-body .textBox .heart-txt::before {
+  content: "\e603";
+}
+.IndexPage-default-body .textBox .heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  float: left;
+}
+.IndexPage-default-body .textBox .heart:before,
+.IndexPage-default-body .textBox .heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: #fc2e5a;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+.IndexPage-default-body .textBox .heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+.IndexPage-default .Footer {
+  height: 25px;
+}
+
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.ContactPage-container {
+  margin: 0 auto;
+  padding: 0 0 40px;
+  max-width: 1000px;
+}
+
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.ResponsivePage {
+  background-color: #000042;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  color: yellow;
+}
+.ResponsivePage-container {
+  margin: 0 auto;
+  padding: 0 0 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 250px;
+  width: 100%;
+}
+.ResponsivePage #playerSelect {
+  font-size: 3em;
+  text-align: center;
+  z-index: 9999;
+  text-decoration: blink;
+}
+.ResponsivePage .skill {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin: 0px 5px 5px 5px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: opacity(60%);
+          filter: opacity(60%);
+}
+.ResponsivePage .skill:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.ResponsivePage .skill img {
+  display: none;
+}
+.ResponsivePage #Gulp {
+  -webkit-filter: brightness(1000%);
+          filter: brightness(1000%);
+}
+.ResponsivePage #skillWrapper {
+  display: block;
+  max-width: 760px;
+  margin: auto auto;
+  text-align: center;
+}
+.ResponsivePage .SkillInfo {
+  position: absolute;
+  right: 0%;
+  top: 0;
+  z-index: -1;
+}
+.ResponsivePage #d3-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  text-align: center;
+}
+.ResponsivePage .graticule {
+  fill: none;
+  stroke: #777;
+  stroke-opacity: .5;
+  stroke-width: .5px;
+}
+.ResponsivePage .land {
+  fill: #222;
+}
+.ResponsivePage .boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.SkillInfo-game {
+  width: 300px;
+  height: 100%;
+  padding: 40px 25px;
+}
+.SkillInfo-game-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.SkillInfo-game .skillImg {
+  display: block;
+  min-height: 200px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: none;
+}
+.SkillInfo-game .skillImg img {
+  display: none;
+}
+.SkillInfo-default {
+  width: 100%;
+  height: 300px;
+  padding: 20px 25px 40px 25px;
+}
+.SkillInfo-default-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.SkillInfo-default .skillImg {
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: none;
+  float: left;
+}
+.SkillInfo-default .skillImg img {
+  display: none;
+}
+.SkillInfo-default .skillText,
+.SkillInfo-default .skillTextExample {
+  width: 50%;
+  float: left;
+  padding: 10px;
+  text-align: center;
+}
+.SkillInfo-default .skillText .header {
+  padding: 10px;
+  margin: 0;
+}
+.SkillInfo-default .skillTextExample .skillTextHeader {
+  padding-left: 10px;
+  margin: 0;
+}
+
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.SkillsPage-game {
+  background-color: #000042;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  color: yellow;
+}
+.SkillsPage-game-container {
+  margin: 0 auto;
+  padding: 0 0 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 250px;
+  width: 100%;
+}
+.SkillsPage-game #playerSelect {
+  font-size: 3em;
+  text-align: center;
+  z-index: 9999;
+  text-decoration: blink;
+}
+.SkillsPage-game .skill {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin: 0px 5px 5px 5px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: opacity(60%);
+          filter: opacity(60%);
+}
+.SkillsPage-game .skill:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.SkillsPage-game .skill img {
+  display: none;
+}
+.SkillsPage-game #Gulp {
+  -webkit-filter: brightness(1000%);
+          filter: brightness(1000%);
+}
+.SkillsPage-game #skillWrapper {
+  display: block;
+  margin: auto auto;
+  text-align: center;
+}
+.SkillsPage-game .SkillInfo-default {
+  position: absolute;
+  right: 0%;
+  top: 0;
+  z-index: -1;
+}
+.SkillsPage-game #d3-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  text-align: center;
+}
+.SkillsPage-game .graticule {
+  fill: none;
+  stroke: #777;
+  stroke-opacity: .5;
+  stroke-width: .5px;
+}
+.SkillsPage-game .land {
+  fill: #222;
+}
+.SkillsPage-game .boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+.SkillsPage-default {
+  width: 100%;
+  overflow-y: auto;
+}
+.SkillsPage-default-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 0 20px;
+  width: 100%;
+}
+.SkillsPage-default #playerSelect {
+  text-align: center;
+  margin: 0;
+}
+.SkillsPage-default #skillWrapper {
+  max-width: 760px;
+  margin: auto auto;
+  text-align: center;
+}
+.SkillsPage-default .skill {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin: 0px 5px 5px 5px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: opacity(60%);
+          filter: opacity(60%);
+}
+.SkillsPage-default .skill:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.SkillsPage-default .skill img {
+  display: none;
+}
+
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+-container {
+  margin: calc(50% - 500px) auto;
+  max-width: 400px;
+}
+.TessWrapper {
+  display: inline-block;
+  text-align: center;
+  background: #4b4b4b;
+  width: 400px;
+  height: 400px;
+}
+.TessWrapper .TesselateContainer {
+  opacity: 0;
+  color: #ffffff;
+}
+.TessWrapper:hover {
+  -webkit-transform: rotateZ(45deg) scale(1.2);
+          transform: rotateZ(45deg) scale(1.2);
+  border-radius: 100%;
+}
+.TessWrapper:hover .TesselateContainer {
+  opacity: 1;
+  border-radius: 100%;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  text-decoration: none;
+}
+.TessWrapper:hover .TesselateContainer:hover {
+  box-shadow: inset 0px 0px 10px 0px #ABABAB;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.TessWrapper:hover h3 {
+  -webkit-transform: rotateZ(-45deg) translateX(-25%) translateY(175%);
+          transform: rotateZ(-45deg) translateX(-25%) translateY(175%);
+}
+.TessWrapper:hover .TesselateContainer:nth-child(1) {
+  background-color: #0000ff;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(1):hover {
+  background-color: #0000b3;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(2) {
+  background-color: #00ff00;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(2):hover {
+  background-color: #00b300;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(3) {
+  background-color: #ff0000;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(3):hover {
+  background-color: #b30000;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(4) {
+  background-color: #ffff00;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(4):hover {
+  background-color: #b2b300;
+}
+.TesselateContainer {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  float: left;
+}
+.TesselateContainer:hover {
+  background-color: rgba(200, 200, 200, 0.6);
+}
+.TesselateContainer:hover .moreInfo {
+  opacity: 1;
+  pointer-events: auto;
+}
+.TesselateContainer .moreInfo {
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 600px;
+  max-height: 400px;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */

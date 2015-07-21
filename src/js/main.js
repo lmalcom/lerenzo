@@ -1,7 +1,7 @@
-/* jshint -W030 */
-'use strict';
+/* jshint -W030 */ 
+'use strict'; 
 
-import React from 'react';
-import Feed from './components/Feed.js!jsx';
-
-React.render(<Feed />, document.getElementById('app'));
+//base 
+import React from 'react'; 
+import Router from './router'; 
+Router.route(window.location.pathname); 

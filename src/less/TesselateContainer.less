@@ -1,0 +1,108 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+
+@import './variables.less';
+//COLORS
+  @r: rgb(255,0,0); 
+  @b:rgb(0,0,255); 
+  @g:rgb(0,255,0);
+  @y:rgb(255,255,0);
+
+  @light: rgb(255,255,255); 
+
+  //this is from the header...makes sure it is centered on the page
+  &-container {
+    margin: ~"calc(50% - 500px) auto";
+    //padding: 0 0 40px;
+    max-width: 400px;
+  }; 
+
+
+  //Tesselate header 
+  .TessWrapper{
+    display:inline-block;
+    text-align: center;
+    background:rgb(75,75,75); 
+    width: 400px; 
+    height:400px; 
+    
+    
+    .TesselateContainer{
+      opacity: 0; 
+      color:@light; 
+    }
+  }
+  .TessWrapper:hover {
+    transform: rotateZ(45deg) scale(1.2); 
+    border-radius:100%;
+    //background:transparent;
+
+    .TesselateContainer{
+      opacity: 1;
+      border-radius: 100%; 
+      transform:scale(.9); 
+      text-decoration: none;
+
+      &:hover{
+        //box-shadow: 4px 4px 27px 0px rgba(0,0,0,0.75);
+
+      box-shadow: inset 0px 0px 10px 0px #ABABAB;
+      transform: scale(1); 
+      //background-size:110%; 
+      
+        
+      }
+
+    }
+    h3{
+      transform: rotateZ(-45deg) translateX(-25%) translateY(175%);
+    }
+    .TesselateContainer:nth-child(1){
+        background-color:@b; 
+        &:hover{
+          background-color:darken(@b, 15%); 
+        }
+      }
+      .TesselateContainer:nth-child(2){
+        background-color:@g; 
+        &:hover{
+          background-color:darken(@g, 15%); 
+        }
+      }
+      .TesselateContainer:nth-child(3){
+        background-color:@r; 
+        &:hover{
+          background-color:darken(@r, 15%); 
+        }
+      }
+      .TesselateContainer:nth-child(4){
+        background-color:@y; 
+        &:hover{
+          background-color:darken(@y, 15%); 
+        }
+      }
+  }
+.TesselateContainer {
+  width:50%; 
+  height:50%; 
+  display:inline-block; 
+  float:left;
+  &:hover{
+  	background-color:rgba(200,200,200,.6); 
+  	.moreInfo{
+  		opacity:1; 
+  		pointer-events: auto; 
+  	}
+  }
+
+ 	.moreInfo{
+ 		min-width:250px; 
+ 		min-height:250px; 
+ 		
+ 		max-width:600px; 
+ 		max-height:400px; 
+ 		transform: rotateZ(-45deg); 
+ 		opacity:0; 
+ 		pointer-events: none; 
+ 	}
+ 	
+}

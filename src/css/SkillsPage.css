@@ -1,0 +1,123 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.SkillsPage-game {
+  background-color: #000042;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  color: yellow;
+}
+.SkillsPage-game-container {
+  margin: 0 auto;
+  padding: 0 0 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 250px;
+  width: 100%;
+}
+.SkillsPage-game #playerSelect {
+  font-size: 3em;
+  text-align: center;
+  z-index: 9999;
+  text-decoration: blink;
+}
+.SkillsPage-game .skill {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin: 0px 5px 5px 5px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: opacity(60%);
+          filter: opacity(60%);
+}
+.SkillsPage-game .skill:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.SkillsPage-game .skill img {
+  display: none;
+}
+.SkillsPage-game #Gulp {
+  -webkit-filter: brightness(1000%);
+          filter: brightness(1000%);
+}
+.SkillsPage-game #skillWrapper {
+  display: block;
+  margin: auto auto;
+  text-align: center;
+}
+.SkillsPage-game .SkillInfo-default {
+  position: absolute;
+  right: 0%;
+  top: 0;
+  z-index: -1;
+}
+.SkillsPage-game #d3-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  text-align: center;
+}
+.SkillsPage-game .graticule {
+  fill: none;
+  stroke: #777;
+  stroke-opacity: .5;
+  stroke-width: .5px;
+}
+.SkillsPage-game .land {
+  fill: #222;
+}
+.SkillsPage-game .boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+.SkillsPage-default {
+  width: 100%;
+  overflow-y: auto;
+}
+.SkillsPage-default-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 0 20px;
+  width: 100%;
+}
+.SkillsPage-default #playerSelect {
+  text-align: center;
+  margin: 0;
+}
+.SkillsPage-default #skillWrapper {
+  max-width: 760px;
+  margin: auto auto;
+  text-align: center;
+}
+.SkillsPage-default .skill {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin: 0px 5px 5px 5px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: opacity(60%);
+          filter: opacity(60%);
+}
+.SkillsPage-default .skill:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.SkillsPage-default .skill img {
+  display: none;
+}

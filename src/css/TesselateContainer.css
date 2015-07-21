@@ -1,0 +1,85 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+-container {
+  margin: calc(50% - 500px) auto;
+  max-width: 400px;
+}
+.TessWrapper {
+  display: inline-block;
+  text-align: center;
+  background: #4b4b4b;
+  width: 400px;
+  height: 400px;
+}
+.TessWrapper .TesselateContainer {
+  opacity: 0;
+  color: #ffffff;
+}
+.TessWrapper:hover {
+  -webkit-transform: rotateZ(45deg) scale(1.2);
+          transform: rotateZ(45deg) scale(1.2);
+  border-radius: 100%;
+}
+.TessWrapper:hover .TesselateContainer {
+  opacity: 1;
+  border-radius: 100%;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  text-decoration: none;
+}
+.TessWrapper:hover .TesselateContainer:hover {
+  box-shadow: inset 0px 0px 10px 0px #ABABAB;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.TessWrapper:hover h3 {
+  -webkit-transform: rotateZ(-45deg) translateX(-25%) translateY(175%);
+          transform: rotateZ(-45deg) translateX(-25%) translateY(175%);
+}
+.TessWrapper:hover .TesselateContainer:nth-child(1) {
+  background-color: #0000ff;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(1):hover {
+  background-color: #0000b3;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(2) {
+  background-color: #00ff00;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(2):hover {
+  background-color: #00b300;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(3) {
+  background-color: #ff0000;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(3):hover {
+  background-color: #b30000;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(4) {
+  background-color: #ffff00;
+}
+.TessWrapper:hover .TesselateContainer:nth-child(4):hover {
+  background-color: #b2b300;
+}
+.TesselateContainer {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  float: left;
+}
+.TesselateContainer:hover {
+  background-color: rgba(200, 200, 200, 0.6);
+}
+.TesselateContainer:hover .moreInfo {
+  opacity: 1;
+  pointer-events: auto;
+}
+.TesselateContainer .moreInfo {
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 600px;
+  max-height: 400px;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+  opacity: 0;
+  pointer-events: none;
+}

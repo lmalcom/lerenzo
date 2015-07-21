@@ -1,0 +1,67 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+.ExamplesPage {
+  width: 100%;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+.ExamplesPage-container {
+  margin: 0 auto;
+  padding: 20px 0 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+.ExamplesPage iframe {
+  display: inline-block;
+  width: 50%;
+  min-width: 300px;
+  max-width: 500px;
+  height: 360px;
+  border: none;
+  margin: 20px auto;
+  padding: 0 5px;
+}
+.ExamplesPage img {
+  width: 50%;
+  display: inline-block;
+  padding: 10px;
+}
+.ExamplesPage h1 {
+  text-align: center;
+  margin: 0;
+}
+.ExamplesPage .example {
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+.ExamplesPage .exampleHeader {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.ExamplesPage .exampleHeader h2 {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  font-weight: 400;
+}
+.ExamplesPage .exampleHeader .subheader {
+  display: inline-block;
+  float: left;
+  color: #aaaaaa;
+  font-weight: lighter;
+  font-family: 'quicksand';
+  margin-bottom: 0;
+  padding-top: 7px;
+  padding-left: 20px;
+}
+.ExamplesPage p {
+  max-width: 1000px;
+  padding-left: 40px;
+  margin: auto auto;
+  margin-bottom: 25px;
+  font-weight: lighter;
+  font-size: 1em;
+  font-family: quicksand;
+  color: #cbcbcb;
+}

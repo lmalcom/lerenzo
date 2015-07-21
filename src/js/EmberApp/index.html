@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<title>Ember App</title>
+  	<meta name="description" content="">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  	<!--<script type="text/javascript" src="http://builds.emberjs.com/release/ember.js"></script>-->
+  	<script type="text/javascript" src="http://builds.emberjs.com/release/ember.debug.js"></script>
+  	<script type="text/javascript" src="http://builds.emberjs.com/release/ember-data.js"></script>
+  	<script type="text/javascript" src="http://builds.emberjs.com/release/ember-template-compiler.js"></script>
+  	<script type="text/javascript" src="./app.js"></script>
+  	<script type="text/javascript" src="./router.js"></script>
+  	<script type="text/javascript" src="./controllers/index.js"></script>
+  	<script type="text/javascript" src="./components/index.js"></script>
+  	<script type="text/javascript" src="./views/button.js"></script>
+</head>
+<body>
+	<script type="text/x-handlebars">
+	    {{nav-bar}}
+	    <div class="container">{{outlet}}</div>
+	    {{footer-bar}}
+	</script>
+
+	<!-- Index Page -->
+	<script type="text/x-handlebars" data-template-name="index">
+	    {{pagination-bar class="pagination-bar"}}
+	    
+	</script>
+		<!--{{main-body class="main-body"}}-->
+
+
+	<!-- About Page -->
+	<script type="text/x-handlebars" data-template-name="about">
+	    wefoiwejfowjefoiwjefoiwj ABOUT PAGE!!!!!!
+	</script>
+
+	<!-- Contact Page -->
+	<script type="text/x-handlebars" data-template-name="contact">
+	    wefoiwejfowjefoiwjefoiwj Contact PAGE!!!!!!
+	</script>
+
+	<script type="text/x-handlebars" data-template-name="components/nav-bar">
+		<nav id="navbar">
+			<a href="#">Logo</a>
+			<a href="#/about">About</a>
+			<a href="#/contact">Contact</a>
+		</nav>
+	</script>
+	
+
+
+	<!-- Main body Components for index page -->
+	<script type="text/x-handlebars" data-template-name="components/pagination-bar">
+		<a {{action 'test'}}>LEFT</a> 
+		<div class="container">
+			
+		</div>
+		<a {{action 'test'}}>RIGHT</a>
+	</script>
+	<!--
+		{{#each model.images as |image|}}
+			<img src={{image}} />
+		{{/each}}
+	-->
+
+	<!--Main body-->
+	<script type="text/x-handlebars" data-template-name="main-body">
+		{{side-bar}}
+		{{product-list}}
+	</script>
+	<script type="text/x-handlebars" data-template-name="component/side-bar">
+		side bar!
+	</script>
+	<script type="text/x-handlebars" data-template-name="component/product-list">
+		omg product list!
+	</script>
+
+
+
+
+
+
+
+
+
+	<script type="text/x-handlebars" data-template-name="components/main-body">
+		{{side-bar}}
+		{{product-list}}
+	</script>
+
+	<script type="text/x-handlebars" data-template-name="components/side-bar">
+		side-bar
+	</script>
+
+	<script type="text/x-handlebars" data-template-name="components/product-list">
+		product-list!
+	</script>
+
+
+
+	<script type="text/x-handlebars" data-template-name="components/footer-bar">
+		FOOTER!!!!
+	</script>
+</body>
+</html>

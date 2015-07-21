@@ -1,0 +1,130 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+
+@import './variables.less';
+
+@brand-color: #61dafb;
+@Footerbg: rgba(17,17,17,.8);
+
+.Footer {
+  //background: #373277;
+  color: #fff;
+  z-index:2;
+  background-color:@Footerbg;
+  font-family:'quicksand';
+  height:30px;
+  display:inline-block;
+  float:left;
+  width:100%;
+  text-align: center;
+
+  a:visited{
+    color: #fff;
+  }
+
+  &-container {
+    margin: 0 auto;
+    //padding: 20px 0;
+    width:100%;
+    height:100%;
+    position:relative;
+  }
+
+
+  &-brand {
+    color: lighten(@brand-color, 10%);
+    text-decoration: none;
+    font-size: 1.75em; // ~28px
+  }
+
+  &-brandImg {
+
+  }
+
+  &-brandTxt {
+    margin-left: 10px;
+  }
+
+  .logo{
+    text-decoration:none;
+    float:left;
+    text-align:center;
+    font-size:2.4em;
+    line-height:70px;
+    cursor: pointer;
+
+
+    .yellow-letters{
+      color:rgb(255, 213, 0);
+      font-weight:bold;
+    }
+  }
+
+  &-nav {
+    float: right;
+    display:inline-block;
+    //width:100%;
+    height:50px;
+    line-height:70px;
+
+    .btn{
+      color:rgb(240,240,240);
+      display:inline-block;
+      min-width:50px;
+      min-height:50px;
+      height:100%;
+      padding:5 25px;
+      text-decoration:none;
+    }
+    .btn:hover{
+      background-color:lighten(@Footerbg, 50%);
+
+    }
+  }
+
+  &-banner {
+    text-align: center;
+  }
+
+  &-bannerTitle {
+    margin: 0;
+    padding: 10px;
+    font-weight: normal;
+    font-size: 4em;
+    line-height: 1em;
+  }
+
+  &-bannerDesc {
+    padding: 0;
+    color: rgba(255, 255, 255, .5);
+    font-size: 1.25em;
+    margin: 0;
+  }
+
+  i{
+    font-size:.7em;
+    line-height:30px;
+    margin-right:25px;
+  }
+  .social{
+    height:30px;
+    width:200px;
+    position:absolute;
+    right:0;
+    top:0;
+    a{
+      width:25%;
+      position:relative;
+      height:30px;
+      display:inline-block;
+      margin:auto auto;
+      background-repeat:no-repeat;
+      background-size:auto 80%;
+      background-position:center;
+    }
+
+    a:hover{
+      transform:scale(1.4) translateY(-5px);
+      background-color:lighten(@Footerbg, 50%);
+    }
+  }
+}
