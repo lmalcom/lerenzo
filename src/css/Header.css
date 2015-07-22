@@ -39,11 +39,26 @@
   color: #ffd500;
   font-weight: bold;
 }
+.Header .nav-btn {
+  display: none;
+  background-image: url("/src/images/icons/menu.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  width: 50px;
+  height: 100%;
+  cursor: pointer;
+}
+.Header .nav-btn:hover {
+  background-color: rgba(145, 145, 145, 0.8);
+}
 .Header-nav {
   float: right;
   display: inline-block;
   height: 50px;
   line-height: 70px;
+  overflow: hidden;
+  transition: height .5s;
 }
 .Header-nav .btn {
   color: #f0f0f0;
@@ -72,4 +87,43 @@
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.25em;
   margin: 0;
+}
+@media (max-width: 768px) {
+  .Header {
+    height: auto;
+  }
+  .Header-container {
+    height: auto;
+  }
+  .Header .logo {
+    font-size: 1.5em;
+    height: 60px;
+    padding-left: 20px;
+  }
+  .Header .nav-btn {
+    display: inline-block;
+    float: right;
+    height: 60px;
+  }
+  .Header-nav {
+    height: 0;
+    pointer-events: none;
+    width: 100%;
+    position: relative;
+    background-color: rgba(17, 17, 17, 0.8);
+  }
+  .Header-nav .btn {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 50px;
+  }
+  .Header .active {
+    height: 240px;
+    pointer-events: auto;
+  }
+  .Header .disabled {
+    height: 0;
+  }
 }

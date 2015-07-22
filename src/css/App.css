@@ -45,7 +45,7 @@ h2 {
 }
 p {
   font-family: quicksand;
-  color: #cbcbcb;
+  color: #e6e6e6;
   text-shadow: 1px 1px 1px #000000;
 }
 a {
@@ -72,6 +72,12 @@ a {
   display: inline-block;
   float: left;
   box-shadow: inset 10px 5px 85px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .page {
+    height: calc(100% - 110px);
+  }
 }
 /*
  * Remove text-shadow in selection highlight:

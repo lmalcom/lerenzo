@@ -25,6 +25,7 @@ let DOM = React.DOM,
 	div = DOM.div,
 	script = DOM.script,
 	link = DOM.link,
+	meta = DOM.meta,
 	env = "normal";
 
 // A utility function to safely escape JSON for embedding in a <script> tag
@@ -74,6 +75,8 @@ function getComponent(pagename, subpage){
 function createMarkup(pagename, subpage){
     return React.renderToString(html(null,
     	head(null,
+    		meta({charSet:"UTF-8"}),
+    		meta({name:"viewport", content:"width=device-width, initial-scale=1"}),
     		link({href:"/src/css/main.css", type:'text/css', rel:"stylesheet"})
     	),
     	body(null,
@@ -96,7 +99,7 @@ function createMarkup(pagename, subpage){
 	        script({src: 'https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js'}),
 	        
 	        //ember page stuff
-	        // script({src: 'https://code.jquery.com/jquery-2.1.4.min.js'}),
+	        script({src: 'https://code.jquery.com/jquery-2.1.4.min.js'}),
 	        // script({src: 'http://builds.emberjs.com/release/ember.js'}),
 	        // script({src: 'http://builds.emberjs.com/release/ember-data.js'}),
 	        // script({src: 'http://builds.emberjs.com/release/ember-template-compiler.js'}),
@@ -126,6 +129,10 @@ page('/skills', function(req, res){
 page('/examples', function(req, res){
 	console.log('routing examples');
     React.render(<App id="app" env={env} pagename='examples' subpage=""></App>, document.getElementById('app'));
+});
+page('/about', function(req, res){
+	console.log('routing about');
+    React.render(<App id="app" env={env} pagename='about' subpage=""></App>, document.getElementById('app'));
 });
 page('/ember', function(req, res){
 	console.log('routing ember');

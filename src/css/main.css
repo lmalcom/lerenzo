@@ -65,7 +65,7 @@ h2 {
 }
 p {
   font-family: quicksand;
-  color: #cbcbcb;
+  color: #e6e6e6;
   text-shadow: 1px 1px 1px #000000;
 }
 a {
@@ -92,6 +92,12 @@ a {
   display: inline-block;
   float: left;
   box-shadow: inset 10px 5px 85px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .page {
+    height: calc(100% - 110px);
+  }
 }
 /*
  * Remove text-shadow in selection highlight:
@@ -233,7 +239,6 @@ textarea {
 .ExamplesPage {
   width: 100%;
   overflow-y: auto;
-  padding: 0 20px;
 }
 .ExamplesPage-container {
   margin: 0 auto;
@@ -244,12 +249,20 @@ textarea {
 .ExamplesPage iframe {
   display: inline-block;
   width: 50%;
-  min-width: 300px;
-  max-width: 500px;
   height: 360px;
   border: none;
   margin: 20px auto;
   padding: 0 5px;
+}
+@media (max-width: 480px) {
+  .ExamplesPage iframe {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) and (max-width: 600px) {
+  .ExamplesPage iframe {
+    width: 100%;
+  }
 }
 .ExamplesPage img {
   width: 50%;
@@ -278,7 +291,6 @@ textarea {
 .ExamplesPage .exampleHeader .subheader {
   display: inline-block;
   float: left;
-  color: #aaaaaa;
   font-weight: lighter;
   font-family: 'quicksand';
   margin-bottom: 0;
@@ -293,7 +305,6 @@ textarea {
   font-weight: lighter;
   font-size: 1em;
   font-family: quicksand;
-  color: #cbcbcb;
 }
 
 /* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
@@ -308,6 +319,15 @@ textarea {
   float: left;
   width: 100%;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .Footer {
+    height: 50px;
+  }
+  .Footer-container > i,
+  .Footer a {
+    display: none;
+  }
 }
 .Footer a:visited {
   color: #fff;
@@ -375,7 +395,7 @@ textarea {
 .Footer i {
   font-size: .7em;
   line-height: 30px;
-  margin-right: 25px;
+  margin-right: 10px;
 }
 .Footer .social {
   height: 30px;
@@ -398,6 +418,17 @@ textarea {
   -webkit-transform: scale(1.4) translateY(-5px);
           transform: scale(1.4) translateY(-5px);
   background-color: rgba(145, 145, 145, 0.8);
+}
+@media (max-width: 768px) {
+  .Footer .social {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+  }
+  .Footer .social a {
+    height: 100%;
+  }
 }
 
 /* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
@@ -441,11 +472,26 @@ textarea {
   color: #ffd500;
   font-weight: bold;
 }
+.Header .nav-btn {
+  display: none;
+  background-image: url("/src/images/icons/menu.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  width: 50px;
+  height: 100%;
+  cursor: pointer;
+}
+.Header .nav-btn:hover {
+  background-color: rgba(145, 145, 145, 0.8);
+}
 .Header-nav {
   float: right;
   display: inline-block;
   height: 50px;
   line-height: 70px;
+  overflow: hidden;
+  transition: height .5s;
 }
 .Header-nav .btn {
   color: #f0f0f0;
@@ -475,6 +521,45 @@ textarea {
   font-size: 1.25em;
   margin: 0;
 }
+@media (max-width: 768px) {
+  .Header {
+    height: auto;
+  }
+  .Header-container {
+    height: auto;
+  }
+  .Header .logo {
+    font-size: 1.5em;
+    height: 60px;
+    padding-left: 20px;
+  }
+  .Header .nav-btn {
+    display: inline-block;
+    float: right;
+    height: 60px;
+  }
+  .Header-nav {
+    height: 0;
+    pointer-events: none;
+    width: 100%;
+    position: relative;
+    background-color: rgba(17, 17, 17, 0.8);
+  }
+  .Header-nav .btn {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 50px;
+  }
+  .Header .active {
+    height: 240px;
+    pointer-events: auto;
+  }
+  .Header .disabled {
+    height: 0;
+  }
+}
 
 /* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 /* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
@@ -483,12 +568,12 @@ textarea {
   top: 0;
   left: 0;
   z-index: -1;
+  background-color: black;
   background-image: url("/src/images/hearthands-lg.jpg");
   background-position: center;
+  background-size: 100% auto;
   box-shadow: inset 40px 20px 100px rgba(0, 0, 0, 0.6);
-}
-.IndexPage-default {
-  font-family: 'Aria';
+  background-repeat: no-repeat;
 }
 .IndexPage-default-body {
   width: 100%;
@@ -518,7 +603,7 @@ textarea {
   color: #c8c8c8;
   padding: 10 25px;
   margin: 10 auto;
-  font-weight: 500;
+  font-weight: 300;
 }
 .IndexPage-default-body .textBox .social {
   float: right;
@@ -585,6 +670,19 @@ textarea {
 }
 .IndexPage-default .Footer {
   height: 25px;
+}
+@media (max-width: 1200px) {
+  .IndexPage {
+    background-size: auto;
+  }
+}
+@media (max-width: 480px) {
+  .IndexPage-default-body .textBox {
+    width: 100%;
+  }
+  .IndexPage-default-body .textBox h2 {
+    text-align: right;
+  }
 }
 
 /* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
@@ -742,6 +840,19 @@ textarea {
   padding-left: 10px;
   margin: 0;
 }
+@media (max-width: 480px) {
+  .SkillInfo-default {
+    height: 400px;
+  }
+  .SkillInfo-default .skillImg {
+    height: 50%;
+  }
+  .SkillInfo-default .skillText,
+  .SkillInfo-default .skillTextExample,
+  .SkillInfo-default .skillImg {
+    width: 100%;
+  }
+}
 
 /* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
 /* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
@@ -843,6 +954,7 @@ textarea {
   max-width: 760px;
   margin: auto auto;
   text-align: center;
+  padding: 0 20px;
 }
 .SkillsPage-default .skill {
   width: 70px;

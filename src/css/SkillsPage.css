@@ -98,6 +98,7 @@
   max-width: 760px;
   margin: auto auto;
   text-align: center;
+  padding: 0 20px;
 }
 .SkillsPage-default .skill {
   width: 70px;

@@ -5,12 +5,12 @@
   top: 0;
   left: 0;
   z-index: -1;
+  background-color: black;
   background-image: url("/src/images/hearthands-lg.jpg");
   background-position: center;
+  background-size: 100% auto;
   box-shadow: inset 40px 20px 100px rgba(0, 0, 0, 0.6);
-}
-.IndexPage-default {
-  font-family: 'Aria';
+  background-repeat: no-repeat;
 }
 .IndexPage-default-body {
   width: 100%;
@@ -40,7 +40,7 @@
   color: #c8c8c8;
   padding: 10 25px;
   margin: 10 auto;
-  font-weight: 500;
+  font-weight: 300;
 }
 .IndexPage-default-body .textBox .social {
   float: right;
@@ -107,4 +107,17 @@
 }
 .IndexPage-default .Footer {
   height: 25px;
+}
+@media (max-width: 1200px) {
+  .IndexPage {
+    background-size: auto;
+  }
+}
+@media (max-width: 480px) {
+  .IndexPage-default-body .textBox {
+    width: 100%;
+  }
+  .IndexPage-default-body .textBox h2 {
+    text-align: right;
+  }
 }

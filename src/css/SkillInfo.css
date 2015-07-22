@@ -61,3 +61,16 @@
   padding-left: 10px;
   margin: 0;
 }
+@media (max-width: 480px) {
+  .SkillInfo-default {
+    height: 400px;
+  }
+  .SkillInfo-default .skillImg {
+    height: 50%;
+  }
+  .SkillInfo-default .skillText,
+  .SkillInfo-default .skillTextExample,
+  .SkillInfo-default .skillImg {
+    width: 100%;
+  }
+}

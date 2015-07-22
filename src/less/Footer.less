@@ -16,6 +16,13 @@
   float:left;
   width:100%;
   text-align: center;
+  @media (max-width: @screen-sm-min){
+    height:50px;
+
+    &-container > i,a{
+      display:none;
+    }
+  }
 
   a:visited{
     color: #fff;
@@ -103,7 +110,11 @@
   i{
     font-size:.7em;
     line-height:30px;
-    margin-right:25px;
+    margin-right:10px;
+
+    @media (max-width: @screen-sm-min){
+        
+      }
   }
   .social{
     height:30px;
@@ -125,6 +136,17 @@
     a:hover{
       transform:scale(1.4) translateY(-5px);
       background-color:lighten(@Footerbg, 50%);
+    }
+
+    @media (max-width: @screen-sm-min){
+      position:relative;
+      display:inline-block; 
+      height:50px;
+      width: 100%;
+
+      a{
+        height:100%;
+      }
     }
   }
 }
