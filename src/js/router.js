@@ -86,12 +86,15 @@ function createMarkup(pagename, subpage){
 	        // script({dangerouslySetInnerHTML: {__html:
 	        //     'var APP_PROPS = ' + safeStringify(props) + ';'
 	        // }}),
-
+    		
 	        //needed to load es6 modules on the front end
-	        script({src: '/jspm_packages/system.js'}),
-	        script({src: '/config.js'}),
-	        script({src: '/jspm_packages/npm/babel-core@5.6.17/browser-polyfill.min.js'}),
+	        // script({src: '/jspm_packages/system.js'}),
+	        script({src: 'https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.js'}),
 
+	        // script({src: '/config.js'}),
+	        // script({src: '/jspm_packages/npm/babel-core@5.6.17/browser-polyfill.min.js'}),
+	        script({src: 'https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js'}),
+	        
 	        //ember page stuff
 	        // script({src: 'https://code.jquery.com/jquery-2.1.4.min.js'}),
 	        // script({src: 'http://builds.emberjs.com/release/ember.js'}),
@@ -100,7 +103,7 @@ function createMarkup(pagename, subpage){
 
 	        //use the first for the build, the second for dev
 	        script({dangerouslySetInnerHTML: {__html:
-	            "System.import('./build/js/main-bundle.min');"
+	            "System.import('./build/js/main-bundle.min.js');"
 	        }})
 			// script({dangerouslySetInnerHTML: {__html:
 	  //           "System.import('./src/js/main');"

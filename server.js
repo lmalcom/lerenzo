@@ -7,7 +7,7 @@ var http = require('http'),
     React = require('react'),
     express = require('express'),
     expressApp = express(),
-    server = expressApp.listen(3000),
+    server = expressApp.listen(80),
     cors = require('cors')(), 
     router = require('./src/js/router'); 
 

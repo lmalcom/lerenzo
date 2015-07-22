@@ -5,16 +5,16 @@ import SkillInfo from './SkillInfo';
 import characters from '../../skills';
 let worldjson, topojson;
 
-if(typeof window !== 'undefined'&& window.location.pathname === '/skills'){ 
-    System.import('d3');
-    System.import('npm:topojson@1.6.19').then(function(module){
-        topojson = module;
-    });
-    System.import('./src/topojson/world-110m.json!').then(function(json){
-        worldjson = json;
-        console.log('worldjson...', worldjson);
-    });
-}
+// if(typeof window !== 'undefined'&& window.location.pathname === '/skills'){ 
+//     System.import('d3');
+//     System.import('npm:topojson@1.6.19').then(function(module){
+//         topojson = module;
+//     });
+//     System.import('./src/topojson/world-110m.json!').then(function(json){
+//         worldjson = json;
+//         console.log('worldjson...', worldjson);
+//     });
+// }
 
 class ResponsivePage extends React.Component {
 
