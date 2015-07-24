@@ -15,7 +15,44 @@ var http = require('http'),
 //spawn other server???
 var spawn = require('child_process').exec,
     ls    = spawn('node ../nella/server.js'),
-    ls2    = spawn('node ../requirejs/server.js');
+    ls2    = spawn('node ../requirejs/server.js'),
+    ls3    = spawn('node ../d3app/app.js');
+
+ls.stdout.on('data', function (data) {
+  console.log('stdout: ' + data);
+});
+
+ls.stderr.on('data', function (data) {
+  console.log('stderr: ' + data);
+});
+
+ls.on('close', function (code) {
+  console.log('child process exited with code ' + code);
+});
+
+ls2.stdout.on('data', function (data) {
+  console.log('stdout: ' + data);
+});
+
+ls2.stderr.on('data', function (data) {
+  console.log('stderr: ' + data);
+});
+
+ls2.on('close', function (code) {
+  console.log('child process exited with code ' + code);
+});
+
+ls3.stdout.on('data', function (data) {
+  console.log('stdout: ' + data);
+});
+
+ls3.stderr.on('data', function (data) {
+  console.log('stderr: ' + data);
+});
+
+ls3.on('close', function (code) {
+  console.log('child process exited with code ' + code);
+});
 
 console.log('server is up!'); 
 
@@ -52,6 +89,9 @@ expressApp.get('/:pagename', function(req, res, next){
 // }); 
 expressApp.get('/nella', function(req, res, next){
     res.redirect('http://localhost:4000/#email');
+})
+expressApp.get('/bnet', function(req, res, next){
+    res.redirect('http://localhost:9000/map');
 })
 
 expressApp.get('/blocks/:pagename', function(req, res, next){
