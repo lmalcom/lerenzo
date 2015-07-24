@@ -88,15 +88,15 @@ expressApp.get('/:pagename', function(req, res, next){
 //     res.send(router.createMarkup(pagename, subpage)); 
 // }); 
 expressApp.get('/nella', function(req, res, next){
-    res.redirect('http://localhost:4000/#email');
+    res.redirect('http://lerenzo.com:4000/#email');
 })
 expressApp.get('/bnet', function(req, res, next){
-    res.redirect('http://localhost:9000/map');
+    res.redirect('http://lerenzo.com:9000/map');
 })
 
 expressApp.get('/blocks/:pagename', function(req, res, next){
     var pagename = req.params.pagename || 'leap4'; 
-    res.redirect('http://localhost:8801/' + pagename);
+    res.redirect('http://lerenzo.com:8801/' + pagename);
 })
 
 expressApp.use(express.static(__dirname)); 
