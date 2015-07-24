@@ -8,13 +8,14 @@ var http = require('http'),
     express = require('express'),
     expressApp = express(),
     //server = expressApp.listen(80),
-    server = expressApp.listen(3000),
+    server = expressApp.listen(80),
     cors = require('cors')(), 
     router = require('./src/js/router'); 
 
 //spawn other server???
 var spawn = require('child_process').exec,
-    ls    = spawn('node ../nella/server.js');
+    ls    = spawn('node ../nella/server.js'),
+    ls2    = spawn('node ../requirejs/server.js');
 
 console.log('server is up!'); 
 
@@ -49,11 +50,13 @@ expressApp.get('/:pagename', function(req, res, next){
 //         subpage = req.params.subpage || ''; 
 //     res.send(router.createMarkup(pagename, subpage)); 
 // }); 
-expressApp.get('/testing', function(req, res, next){
-    console.log('oh heeeeey from testing!'); 
-    //res.redirect('localhost:4000'); 
+expressApp.get('/nella', function(req, res, next){
     res.redirect('http://localhost:4000/#email');
-    //res.redirect('http://google.com'); 
+})
+
+expressApp.get('/blocks/:pagename', function(req, res, next){
+    var pagename = req.params.pagename || 'leap4'; 
+    res.redirect('http://localhost:8801/' + pagename);
 })
 
 expressApp.use(express.static(__dirname)); 

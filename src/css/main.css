@@ -468,6 +468,7 @@ textarea {
   font-size: 2.4em;
   line-height: 70px;
   cursor: pointer;
+  color: white;
 }
 .Header .logo .yellow-letters {
   color: #ffd500;
